@@ -25,7 +25,7 @@ namespace cuda {
 
 const char* ToString(cublasStatus_t status) {
 #if CUDA_VERSION >= 11050  // `GetStatusString` was added in 11.4 update 2.
-  return cublasGetStatusString(status);
+  return "cublas error";
 #else
   return "cublas error";
 #endif  // CUDA_VERSION >= 11050
